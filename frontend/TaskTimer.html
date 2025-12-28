@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="timer.css">
+    </head>
+    <body>
+
+        <div id="timer">
+
+            <h1>⏱️ Focus Timer</h3>
+            <p> Stay productive with the Pomodoro technique!</p>
+
+            <p id="ticking">25 : 00</p>
+
+            <div id="controls">
+                <button onclick="start()" id="start"> ▶️START</button>
+                <button onclick="pause()" id="pause"> ⏸️PAUSE</button>
+                <button onclick="reset()" id="reset"> 🔄 RESET</button>
+            </div>
+
+            <div id="customize">
+                <h2> Customize Your Timer</h2>
+                <input type="text" value="25" id="inputValue">
+                <button onclick="setTimer()" id="set">SET TIMER</button>
+            </div>
+
+            <div id="sessions">
+                <h2>Sessions Completed</h2>
+
+                <p id="sessionCount"> 0 </p>
+            </div>
+        </div>
+
+        <script src="timer.js"></script>
+    </body>
+</html>
