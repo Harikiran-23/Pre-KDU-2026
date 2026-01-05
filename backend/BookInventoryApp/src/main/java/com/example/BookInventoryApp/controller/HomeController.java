@@ -18,7 +18,7 @@ import com.example.BookInventoryApp.service.BookService;
 @RestController
 @RequestMapping("/api/books")
 public class HomeController {
-    @Autowired
+//    @Autowired
     private final BookService service;
 
     public HomeController(BookService service){
@@ -38,6 +38,11 @@ public class HomeController {
         } catch (RuntimeException ex) {
             return ResponseEntity.notFound().build();
         }
+    }
+
+    @GetMapping("/author/{auth}")
+    public ResponseEntity<List<Book>> getBooksByAuthor(@PathVariable String auth){
+        return ResponseEntity.ok(service.getBooksByAuthor(auth));
     }
 
     @GetMapping("/data")

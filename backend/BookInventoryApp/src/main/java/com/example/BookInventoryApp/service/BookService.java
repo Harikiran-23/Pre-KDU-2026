@@ -28,4 +28,8 @@ public class BookService {
         return repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Book not found"));
     }
+
+    public List<Book> getBooksByAuthor(String auth){
+        return repository.findByAuthor(auth);
+    }
 }

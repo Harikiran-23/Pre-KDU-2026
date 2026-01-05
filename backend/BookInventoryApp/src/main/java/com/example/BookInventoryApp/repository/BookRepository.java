@@ -22,6 +22,7 @@ public class BookRepository {
         save(new Book(0, "Book 3", "Stuart", new BigDecimal("699.00")));
         save(new Book(0, "Book 4", "Nothing", new BigDecimal("799.00")));
         save(new Book(0, "Book 5", "Veronika", new BigDecimal("899.00")));
+        save(new Book(0, "Book 6", "Veronika", new BigDecimal("999.00")));
     }
 
     public Book save(Book book){
@@ -32,6 +33,17 @@ public class BookRepository {
 
     public Optional<Book> findById(int id) {
         return Optional.ofNullable(bookStore.get(id));
+    }
+
+    public List<Book> findByAuthor(String auth) {
+        List<Book> booksByAuthor = List.of();
+        for(int id: bookStore.keySet()){
+            Book cur = bookStore.get(id);
+            if(cur.getAuthor().equals(auth)){
+                booksByAuthor.add(cur);
+            }
+        }
+        return booksByAuthor;
     }
 
     public List<Book> findAll() {
