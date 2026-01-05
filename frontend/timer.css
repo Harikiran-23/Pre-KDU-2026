@@ -1,0 +1,87 @@
+body{
+    background-color: purple;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+}
+
+#controls{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    position: relative;
+    left: 70px;
+}
+
+#timer{
+    background-color: whitesmoke;
+    border-radius: 20px;
+    width: 500px;
+    height:600px;
+    text-align: center;
+    padding-top: 20px;
+
+}
+
+#ticking{
+    font-size: 40px;
+    color: rgb(238, 8, 192);
+    font-weight: bolder;
+    font-family:fantasy;
+}
+
+#customize{
+    background-color: rgba(0, 0, 0, 0.115);
+    width: 400px;
+    border-radius: 20px;
+    padding: 5px;
+    margin:10px;
+    margin-left: 40px;
+    height:125px;
+}
+#sessions{
+    background-color: rgba(255, 69, 1, 0.297);
+    width: 400px;
+    border-radius: 20px;
+    padding: 5px;
+    margin:10px;
+    margin-left: 40px;
+}
+
+button{
+    width: 120px;
+    height:50px;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    font-size:15px;
+    color: white;
+}
+#start{
+    background-color: rgba(0, 0, 255, 0.57);
+}
+#pause{
+    background-color: rgba(255, 192, 203, 0.768);
+}
+#reset{
+    background-color: rgba(0, 255, 255, 0.748);
+}
+#set{
+    background-color: rgba(0, 255, 255, 0.748);
+}
+
+#inputValue{
+    width: 60px;
+    height: 50px;
+    border-radius: 20%;
+    border:none;
+    text-align: center;
+    font-size: 15px;
+}
+
+#sessionCount{
+    font-size:20px;
+    color: red;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 800;
+}
