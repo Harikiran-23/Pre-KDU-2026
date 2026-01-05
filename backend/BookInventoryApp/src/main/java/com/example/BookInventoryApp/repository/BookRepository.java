@@ -36,10 +36,10 @@ public class BookRepository {
     }
 
     public List<Book> findByAuthor(String auth) {
-        List<Book> booksByAuthor = List.of();
+        List<Book> booksByAuthor = new ArrayList<>();
         for(int id: bookStore.keySet()){
             Book cur = bookStore.get(id);
-            if(cur.getAuthor().equals(auth)){
+            if (cur.getAuthor().equalsIgnoreCase(auth)) {
                 booksByAuthor.add(cur);
             }
         }
