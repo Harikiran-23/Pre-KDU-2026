@@ -1,5 +1,8 @@
 import { useState } from "react";
 import './App.css'
+import Rentals from "./components/Rentals";
+import Movie from "./components/Movie";
+
 type Movie = {
   id: number;
   name: string;
@@ -54,6 +57,13 @@ function App() {
 
   return (
     <div className="app-container">
+
+      <Rentals>
+      </Rentals>
+        <Movie name='Avatar ' ></Movie>
+        <Movie name="Avengers"></Movie>
+        <Movie name="Spider Name" ></Movie>
+
       <div className="app-header">
         <h1>🎬 Movie Watchlist</h1>
         <p>Track movies you want to watch</p>
